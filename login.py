@@ -871,7 +871,6 @@ def LoginToInstagram(nums):
                 json.dump(ModifyJson, outfile)
         else :
             print (f"{R}[!]{W} {Y}Answer with (Y/N) next time.{W}")
-            sys.exit()
 
     print ("")
     device_id = None
@@ -893,20 +892,16 @@ def LoginToInstagram(nums):
     except (ClientCookieExpiredError, ClientLoginRequiredError) as e:
         print (f'[ {R}COOKIES EXPIRED RE-LOGIN{W} ] : {e}\n')
         Fix()
-        sys.exit()
 
     except ClientLoginError as e:
         print (f'[ {R}ClientLoginError{W} ] : {e}\n')
         Fix()
-        sys.exit()
 
     except ClientError as e:
         print (f'[ {R}ClientError{W} ] : {e.msg}\n[ {R}Code{W} ] : {e.code}\n[ {R}Response{W} ] : {e.error_response}\n')
-        sys.exit()
 
     except Exception as e:
         print (f'[ {R}Unexpected Exception{W} ] : {e}\n')
-        sys.exit()
 
     except KeyboardInterrupt :
         sys.exit()
