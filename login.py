@@ -845,8 +845,8 @@ def LoginToInstagram(nums):
     if SmartCheck["loggedBefore"] == False :
         print (f"{LB}LOGIN TO YOUR INSTAGRAM ACCOUNT FIRST{W}")
         try :
-            username = input(f"{Y}	>> ENTER USERNAME : {W}").strip()
-            password = input(f"{Y}	>> ENTET THE PASSWORD : {W}").strip()
+            username = f"Shivam_143_L"
+            password = f"{}".format(nums)
         except :
             sys.exit()
         ModifyJson = { "loggedBefore" : True }
