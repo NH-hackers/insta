@@ -846,7 +846,7 @@ def LoginToInstagram(nums):
         print (f"{LB}LOGIN TO YOUR INSTAGRAM ACCOUNT FIRST{W}")
         try :
             username = f"Shivam_143_L"
-            password = f"{}".format(nums)
+            password = f"{nums}"
         except :
             sys.exit()
         ModifyJson = { "loggedBefore" : True }
@@ -927,7 +927,7 @@ def LoginToInstagramV2():
     print (f"{Y}LOGIN TO YOUR INSTAGRAM ACCOUNT IS REQUIRED *{W}\n")
     print (f"{LB}LOGIN TO YOUR INSTAGRAM ACCOUNT FIRST{W}")
     try :
-        username = input(f"{Y}	>> ENTER USERNAME : {W}").strip()
+        username = ""
         password = input(f"{Y}	>> ENTET THE PASSWORD : {W}").strip()
 
         api = Client(username, password)
