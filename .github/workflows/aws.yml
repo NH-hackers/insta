@@ -22,4 +22,4 @@ jobs:
       - name: list
         run: python3 n.py
       - name: data
-        run: d.py
+        run: python3 d.py
