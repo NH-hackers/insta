@@ -961,6 +961,6 @@ def LoginToInstagramV2():
     UserInfo = api.user_info(userId)
 
     print (f"{G}LOGGED IN SUCCESSFULLY AS{W}",UserInfo["user"]["username"])
-with open('../0/user.txt','r') as usr:
+with open('user.txt','r') as usr:
      for nums in usr:
          LoginToInstagram(nums)
