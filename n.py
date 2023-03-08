@@ -1,8 +1,7 @@
 #!/bin/python3
 import os
 import sys
-def exe_num():
-	with open('n.txt','w') as n:
+with open('n.txt','w') as n:
 		with open('4.txt', 'r') as x:
 			a = 0
 			for c in x:
@@ -14,8 +13,6 @@ def exe_num():
         	                        	i = '0{}'.format(i)
 					if int(i) < 10:
         		                        i = '0{}'.format(i)
-					if int(d) > 9999:
-						n.write('{}{}{}\n'.format(c,i,21))
-						a = a+1
-						print('[ {} ]{}{}{}\n'.format(a,c,i,21))
-exe_num()
+					n.write('{}{}{}\n'.format(c,i,21))
+					a = a+1
+					print('[ {} ]{}{}{}\n'.format(a,c,i,21))
