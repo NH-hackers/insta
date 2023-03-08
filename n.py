@@ -1,7 +1,7 @@
 #!/bin/python3
 import os
 import sys
-with open('n.txt','w') as n:
+with open('user.txt','w') as n:
 		with open('4.txt', 'r') as x:
 			a = 0
 			for c in x:
