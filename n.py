@@ -14,6 +14,8 @@ def exe_num():
         	                        	i = '0{}'.format(i)
 					if int(i) < 10:
         		                        i = '0{}'.format(i)
-					n.write('{}{}{}\n'.format(c,i,21))
-					a = a+1
-					print('[ {} ]{}{}{}\n'.format(a,c,i,21))
+					if int(d) > 9999:
+						n.write('{}{}{}\n'.format(c,i,21))
+						a = a+1
+						print('[ {} ]{}{}{}\n'.format(a,c,i,21))
+exe_num()
