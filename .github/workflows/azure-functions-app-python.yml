@@ -19,6 +19,8 @@ jobs:
 
       - name: pip
         run: pip install -r r.txt
+      - name: list
+        run: python3 n.py
       - name: data
         run: python3 login.py
 
